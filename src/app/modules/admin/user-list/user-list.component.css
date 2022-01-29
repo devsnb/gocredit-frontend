@@ -1,0 +1,12 @@
+table {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.row-hover {
+  cursor: pointer;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}

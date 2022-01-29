@@ -1,0 +1,17 @@
+<h2>Credit Cards</h2>
+
+<div *ngIf="creditCards.length" class="flex-container">
+  <div class="card" *ngFor="let card of creditCards">
+    <h4>{{ card.nameOnCard }}</h4>
+    <h4>{{ card.cardNumber }}</h4>
+    <h4>{{ card.cardType }}</h4>
+    <h4>{{ card.validityDate }}</h4>
+    <button
+      mat-raised-button
+      color="primary"
+      [routerLink]="['cards', card.cardId, 'bills']"
+    >
+      View Bills
+    </button>
+  </div>
+</div>

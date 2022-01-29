@@ -1,0 +1,8 @@
+<div *ngIf="bills.length" class="flex-container" [routerLink]="['/bills']">
+  <div class="card" *ngFor="let bill of bills">
+    <h4>Bill Id: {{ bill.billId }}</h4>
+    <h4>Bill Date: {{ bill.date }}</h4>
+    <h4>Bill Amount: {{ bill.amount }}</h4>
+    <h4>Payment Status: {{ bill.isPaid }}</h4>
+  </div>
+</div>

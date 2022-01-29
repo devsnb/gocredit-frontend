@@ -1,0 +1,32 @@
+<div *ngIf="user" class="card">
+  <div class="header">
+    <h3>{{ user.name }}</h3>
+    <h4>{{ user.email }}</h4>
+  </div>
+
+  <div class="details-group">
+    <h4>Contact Number</h4>
+    <h4>{{ user.contactNumber }}</h4>
+  </div>
+
+  <div class="details-group">
+    <h4>State</h4>
+    <h4>{{ user.address.state }}</h4>
+  </div>
+  <div class="details-group">
+    <h4>City</h4>
+    <h4>{{ user.address.city }}</h4>
+  </div>
+  <div class="details-group">
+    <h4>ZipCode</h4>
+    <h4>{{ user.address.zipcode }}</h4>
+  </div>
+</div>
+
+<app-credit-cards *ngIf="user" [userId]="user.userId"></app-credit-cards>
+
+<!-- <button type="button" mat-flat-button color="primary" [routerLink]="['cards']">
+  Show Cards
+</button>
+
+<router-outlet></router-outlet> -->
