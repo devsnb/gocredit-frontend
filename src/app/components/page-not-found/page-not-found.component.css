@@ -1,0 +1,29 @@
+.image {
+  margin-top: 5rem;
+  height: 50vh;
+  width: 30vw;
+}
+.image2 {
+  margin-top: 16rem;
+  padding-left: 2rem;
+  height: 50vh;
+  width: 30vw;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.image3 {
+  margin: auto;
+  margin-top: 3rem;
+  height: 70vh;
+  width: 40vw;
+  background-color: beige;
+  border-radius: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px, rgba(0, 0, 0, 0.1) 0px 8px 24px,
+    rgba(0, 0, 0, 0.1) 0px 16px 56px;
+}
+.h1 {
+  text-align: center;
+  margin-right: 33rem;
+}

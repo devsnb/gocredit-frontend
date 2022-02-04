@@ -7,6 +7,7 @@ import { AuthModule } from '../app/modules/auth/auth.module';
 import { BillsModule } from '../app/modules/bills/bills.module';
 import { AdminModule } from '../app/modules/admin/admin.module';
 import { HttpClientModule } from '@angular/common/http';
+import { UserModule } from '../app/modules/user/user.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     AdminModule,
     HttpClientModule,
     BillsModule,
+    UserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

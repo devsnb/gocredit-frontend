@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       .subscribe((data) => {
         console.log(data);
         this.user = data;
-        this._router.navigate(['/home']);
+        this._router.navigate(['/me']);
       });
   };
 
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       .subscribe((data) => {
         console.log(data);
         this.user = data;
-        this._router.navigate(['/home']);
+        this._router.navigate(['/me']);
       });
   };
 }

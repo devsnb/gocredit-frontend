@@ -1,1 +1,34 @@
-<p>display-bills works!</p>
+<div *ngIf="bills.length" [routerLink]="['/display-bills']">
+  <div class="card" *ngFor="let bill of bills">
+    <div>
+      <h3 class="biller-name">
+        <mat-icon>account_circle</mat-icon> {{ bill.billerName }}
+      </h3>
+    </div>
+    <div class="details-group">
+      <h4>Bill No:</h4>
+      <h4>{{ bill.billId }}</h4>
+    </div>
+    <div class="details-group">
+      <h4>Bill Date:</h4>
+      <h4>{{ bill.date }}</h4>
+    </div>
+    <div class="details-group">
+      <h4>Payment Status:</h4>
+
+      <h4>{{ bill.isPaid }}</h4>
+    </div>
+    <div class="details-group">
+      <h4>Bill Amount:</h4>
+      <h4>
+        {{ bill.amount }}
+      </h4>
+    </div>
+  </div>
+
+  <!-- <button type="button" mat-flat-button color="primary" [routerLink]="['cards']">
+      Show Cards
+    </button>
+
+    <router-outlet></router-outlet> -->
+</div>

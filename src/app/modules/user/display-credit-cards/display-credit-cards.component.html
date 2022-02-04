@@ -1,1 +1,29 @@
-<p>display-credit-cards works!</p>
+<h2 class="heading">Credit Cards</h2>
+<div *ngIf="creditCards.length" class="flex-container">
+  <div *ngFor="let card of creditCards">
+    <div class="card">
+      <h4>{{ card.cardType }}</h4>
+      <h4>{{ card.cardNumber }}</h4>
+
+      <h4>{{ card.validityDate }}</h4>
+      <h4>{{ card.nameOnCard }}</h4>
+    </div>
+    <div class="button">
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="[card.cardId, 'update-credit-card']"
+      >
+        Update CreditCard
+      </button>
+      <button
+        class="button2"
+        mat-raised-button
+        color="primary"
+        (click)="onDelete(card.cardId)"
+      >
+        Delete CreditCard
+      </button>
+    </div>
+  </div>
+</div>

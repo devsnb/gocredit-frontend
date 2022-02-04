@@ -23,7 +23,7 @@ export class UserListComponent implements OnInit {
     this.adminService.getAllUsers().subscribe((data) => {
       this.dataSource = data.map<UserElement>((data) => {
         const formattedUser: UserElement = {
-          id: data.userId,
+          id: data.userId!,
           name: data.name,
           contactNumber: data.contactNumber,
           email: data.email,

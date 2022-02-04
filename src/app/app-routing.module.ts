@@ -10,8 +10,12 @@ import { CreditCardsComponent } from './modules/admin/credit-cards/credit-cards.
 import { UserDetailsComponent } from './modules/admin/user-details/user-details.component';
 import { UserListComponent } from './modules/admin/user-list/user-list.component';
 import { LoginComponent } from './modules/auth/login/login.component';
+import { SignUpComponent } from './modules/auth/sign-up/sign-up.component';
+import { AddCreditCardComponent } from './modules/user/add-credit-card/add-credit-card.component';
+import { DeleteCreditCardComponent } from './modules/user/delete-credit-card/delete-credit-card.component';
 import { DisplayBillsComponent } from './modules/user/display-bills/display-bills.component';
 import { DisplayCreditCardsComponent } from './modules/user/display-credit-cards/display-credit-cards.component';
+import { UpdateCreditCardComponent } from './modules/user/update-credit-card/update-credit-card.component';
 import { UserProfileComponent } from './modules/user/user-profile/user-profile.component';
 
 const routes: Routes = [
@@ -23,6 +27,7 @@ const routes: Routes = [
     path: 'about-us',
     component: AboutUsComponent,
   },
+
   {
     path: 'contact-us',
     component: ContactUsComponent,
@@ -32,7 +37,11 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path: 'admin/users/:userId/cards/:cardId/bills',
+    path: 'sign-up',
+    component: SignUpComponent,
+  },
+  {
+    path: 'admin/users/:userId/credit-card/:cardId/bills',
     component: BillsComponent,
     children: [
       {
@@ -41,12 +50,18 @@ const routes: Routes = [
       },
     ],
   },
+
+  {
+    path: 'admin/users/:userId/credit-card/:cardId/add-bill',
+    component: AddBillFormComponent,
+  },
+
   {
     path: 'admin/users',
     component: UserListComponent,
   },
   {
-    path: 'admin/users/:id',
+    path: 'admin/users/:userId',
     component: UserDetailsComponent,
     children: [
       {
@@ -64,8 +79,22 @@ const routes: Routes = [
         component: DisplayBillsComponent,
       },
       {
+        path: 'add-credit-card',
+        component: AddCreditCardComponent,
+      },
+      {
         path: 'credit-cards',
         component: DisplayCreditCardsComponent,
+        children: [
+          {
+            path: 'delete-credit-card',
+            component: DeleteCreditCardComponent,
+          },
+        ],
+      },
+      {
+        path: 'credit-cards/:cardId/update-credit-card',
+        component: UpdateCreditCardComponent,
       },
     ],
   },

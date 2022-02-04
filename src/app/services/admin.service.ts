@@ -7,6 +7,7 @@ import { User } from '../models/user';
 })
 export class AdminService {
   private baseAdminUrl = 'http://localhost:8081/admin-api/users';
+
   constructor(private http: HttpClient) {}
 
   getAllUsers() {

@@ -1,12 +1,37 @@
 .container {
   width: 31.25rem;
   margin: auto;
+  margin-top: 1rem;
   text-align: center;
+}
+.card {
+  border: 2px solid cornflowerblue;
+}
+.heading {
+  font-weight: 400;
+
+  margin-bottom: 12rem;
+  color: rgb(60, 110, 202);
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.image {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 48vw;
+  height: 80vh;
+  padding-right: 8rem;
+  padding-top: 11rem;
+}
+.top-div {
+  display: flex;
+  flex-direction: row;
 }
 
 .container > h2 {
   font-size: 2rem;
-  margin: 1.5rem 0 1.5rem 0;
+  margin: 3rem 1rem 1rem 0;
+  margin-top: 5rem;
 }
 
 .form-style {
@@ -18,4 +43,20 @@
 .icon {
   margin-left: 2rem;
   color: rgb(40, 40, 151);
+}
+.signup {
+  color: rgb(98, 140, 177);
+
+  font-size: 1rem;
+}
+.button {
+  background-color: rgb(87, 101, 226);
+  font-style: italic;
+  text-shadow: 2px 2px #aaaaaa;
+  border-radius: 3rem;
+  height: 3rem;
+  color: aliceblue;
+  font-size: 24pt;
+  font-family: "Times New Roman";
+  font-weight: bold;
 }

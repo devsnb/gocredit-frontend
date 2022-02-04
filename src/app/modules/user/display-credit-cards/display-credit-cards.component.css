@@ -1,0 +1,24 @@
+.heading {
+  margin-left: 9rem;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: rgb(126, 70, 182);
+  color: #fff;
+  width: 20.25rem;
+  border-radius: 5px;
+  border: 1px solid #e7e6e6;
+  margin-left: 5rem;
+  padding: 1rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px, rgba(0, 0, 0, 0.1) 0px 8px 24px,
+    rgba(0, 0, 0, 0.1) 0px 16px 56px;
+  cursor: pointer;
+}
+.button {
+  margin-left: 5.5rem;
+}
+.button2 {
+  margin-left: 0.4rem;
+}

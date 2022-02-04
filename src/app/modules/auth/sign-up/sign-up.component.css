@@ -1,0 +1,68 @@
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* background-color: #aaaaaa; */
+  background-image: url(../../../../assets/sign2.jpg);
+}
+
+/* .background-image {
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  background-image: url(../../../../assets/home2.jpg);
+} */
+.title {
+  font-size: 55px;
+  font-family: "Times New Roman";
+  text-align: center;
+  font-weight: bold;
+  padding-top: 0.9rem;
+  color: rgb(154, 173, 228);
+  font-style: italic;
+  text-shadow: 2px 2px rgb(124, 120, 120);
+}
+h3 {
+  font-size: 25px;
+  font-family: "Times New Roman";
+  text-align: center;
+  font-weight: bold;
+  padding-top: 0.9rem;
+  color: rgb(154, 173, 228);
+  font-style: italic;
+  text-shadow: 2px 2px rgb(124, 120, 120);
+}
+
+.card-1 {
+  height: 70%;
+  margin: auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  border: 2px solid cornflowerblue;
+}
+.end-container {
+  margin-left: 40rem;
+  margin-top: 2rem;
+}
+.register-button {
+  border-radius: 22px;
+  height: 3.5rem;
+  width: 14rem;
+  color: aliceblue;
+  background-color: cornflowerblue;
+  font-size: 22px;
+}
+.login {
+  color: rgb(215, 220, 223);
+
+  font-size: 1rem;
+}
+.terms {
+  color: #aaaaaa;
+  margin-left: 0.5rem;
+}
+.link {
+  color: bisque;
+}

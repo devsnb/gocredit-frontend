@@ -1,0 +1,41 @@
+.form-div {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  align-items: flex-center;
+}
+.container {
+  margin-left: 6rem;
+  margin-top: auto;
+
+  width: 100px;
+}
+.card {
+  margin: 3rem auto;
+  width: 31.25rem;
+  border-radius: 5px;
+  border: 1.5px solid salmon;
+  padding: 2rem 3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px, rgba(0, 0, 0, 0.1) 0px 8px 24px,
+    rgba(0, 0, 0, 0.1) 0px 16px 56px;
+}
+.bills-heading {
+  font-size: 24pt;
+  font-family: "Times New Roman";
+  text-align: center;
+  font-weight: bold;
+  color: salmon;
+  font-style: italic;
+  text-shadow: 2px 2px #aaaaaa;
+}
+.button {
+  background-color: salmon;
+  font-style: italic;
+  text-shadow: 2px 2px #aaaaaa;
+  border-radius: 3rem;
+  height: 3rem;
+  color: aliceblue;
+  font-size: 24pt;
+  font-family: "Times New Roman";
+  font-weight: bold;
+}

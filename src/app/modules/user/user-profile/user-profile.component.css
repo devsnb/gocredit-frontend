@@ -1,0 +1,14 @@
+.container {
+  margin-left: 20rem;
+}
+
+.button {
+  background-color: cornflowerblue;
+  width: 13rem;
+  height: 4rem;
+  border-radius: 32px;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  font-size: 22px;
+  color: aliceblue;
+}

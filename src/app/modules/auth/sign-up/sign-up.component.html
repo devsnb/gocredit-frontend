@@ -1,0 +1,237 @@
+<div class="background-image">
+  <h1 class="title">Register</h1>
+  <h3>Create your account. It's free and only takes a minute.</h3>
+  <div class="container">
+    <form
+      class="container"
+      #addUserForm="ngForm"
+      (ngSubmit)="signUp(addUserForm)"
+    >
+      <mat-card class="card-1">
+        <mat-form-field appearance="outline">
+          <mat-label class="label">Name</mat-label>
+          <mat-label
+            *ngIf="name.touched && name.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter your name"
+            #name="ngModel"
+            name="name"
+            required
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">Date Of Birth</mat-label>
+          <mat-label
+            *ngIf="dateOfBirth.touched && dateOfBirth.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+
+          <input
+            matInput
+            placeholder="Enter DateOfBirth"
+            #dateOfBirth="ngModel"
+            name="dateOfBirth"
+            required
+            ngModel
+            [matDatepicker]="picker"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">Email</mat-label>
+          <mat-label
+            *ngIf="email.touched && email.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+
+          <input
+            matInput
+            placeholder="Enter your Email"
+            #email="ngModel"
+            required
+            name="email"
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">Password</mat-label>
+          <mat-label
+            *ngIf="password.touched && password.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter your password"
+            #password="ngModel"
+            required
+            name="password"
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">Confirm Password</mat-label>
+          <mat-label
+            *ngIf="password.touched && password.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter same password"
+            #password="ngModel"
+            required
+            name="password"
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">Contact Number</mat-label>
+          <mat-label
+            *ngIf="contactNumber.touched && contactNumber.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter contact number"
+            #contactNumber="ngModel"
+            name="contactNumber"
+            required
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">Door No.</mat-label>
+          <mat-label
+            *ngIf="doorNo.touched && doorNo.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter doorNO."
+            #doorNo="ngModel"
+            name="doorNo"
+            required
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">Street Name</mat-label>
+          <mat-label
+            *ngIf="streetName.touched && streetName.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter streetname"
+            #streetName="ngModel"
+            name="streetName"
+            required
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">City</mat-label>
+          <mat-label
+            *ngIf="city.touched && city.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+
+          <input
+            matInput
+            placeholder="Enter city"
+            #city="ngModel"
+            required
+            name="city"
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">State</mat-label>
+          <mat-label
+            *ngIf="state.touched && state.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter state"
+            required
+            #state="ngModel"
+            name="state"
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="label">ZipCode</mat-label>
+          <mat-label
+            *ngIf="zipcode.touched && zipcode.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter zipcode"
+            #zipcode="ngModel"
+            required
+            name="zipcode"
+            ngModel
+          />
+        </mat-form-field>
+        <div>
+          <input type="checkbox" #terms="ngModel" ngModel />
+          <label class="terms"
+            >I accept the <span>Terms of Use</span> &
+            <span>Privacy Policy.</span></label
+          >
+        </div>
+      </mat-card>
+      <div class="end-container">
+        <button class="register-button" type="submit" mat-raised-button>
+          Register Now
+        </button>
+        <h1 class="login">
+          Already have an account?
+
+          <a href="/login" class="link"><strong>Login</strong></a>
+        </h1>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,6 +1,8 @@
 table {
-  width: 90%;
-  margin: 3rem auto;
+  width: 70%;
+  margin-left: 50px;
+  margin: auto;
+  margin-top: 22px;
 }
 
 .row-hover {
@@ -9,4 +11,18 @@ table {
 
 .demo-row-is-clicked {
   font-weight: bold;
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 91.5%;
+  background-image: url(../../../../assets/home2.jpg);
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font-size: 29px;
 }

@@ -1,1 +1,88 @@
-<p>add-bill-form works!</p>
+<div class="card">
+  <h1 class="bills-heading">BILL</h1>
+  <div class="container">
+    <form
+      class="form-div"
+      #addBillForm="ngForm"
+      (ngSubmit)="onAddBill(addBillForm)"
+    >
+      <mat-form-field appearance="fill">
+        <mat-label>Biller Name</mat-label>
+        <mat-label
+          *ngIf="billerName.touched && billerName.pristine"
+          [ngStyle]="{ color: 'red' }"
+        >
+          is required</mat-label
+        >
+        <input
+          matInput
+          placeholder="Enter biller Name"
+          #billerName="ngModel"
+          name="billerName"
+          required
+          ngModel
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <mat-label
+          *ngIf="date.touched && date.pristine"
+          [ngStyle]="{ color: 'red' }"
+        >
+          is required</mat-label
+        >
+        <input
+          matInput
+          placeholder="Enter Date"
+          #date="ngModel"
+          name="date"
+          required
+          ngModel
+          [matDatepicker]="picker"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Amount</mat-label>
+        <mat-label
+          *ngIf="amount.touched && amount.pristine"
+          [ngStyle]="{ color: 'red' }"
+        >
+          is required</mat-label
+        >
+        <input
+          matInput
+          placeholder="Enter Amount"
+          #amount="ngModel"
+          name="amount"
+          required
+          ngModel
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Bill Status</mat-label>
+        <mat-label
+          *ngIf="billStatus.touched && billStatus.pristine"
+          [ngStyle]="{ color: 'red' }"
+        >
+          is required</mat-label
+        >
+        <input
+          matInput
+          placeholder="Enter Bill Status"
+          #billStatus="ngModel"
+          name="billStatus"
+          required
+          ngModel
+          [matDatepicker]="picker"
+        />
+        <mat-select>
+          <mat-option value="one">Paid</mat-option>
+          <mat-option value="two">Not Paid</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button type="submit" mat-flat-button class="button">Submit</button>
+    </form>
+  </div>
+</div>

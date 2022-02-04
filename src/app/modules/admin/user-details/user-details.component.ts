@@ -19,8 +19,9 @@ export class UserDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((map) => {
-      let id = map.get('id');
-      if (id) this.usersId = parseInt(map.get('id')!);
+      let id = map.get('userId');
+      console.log(id);
+      if (id) this.usersId = parseInt(map.get('userId')!);
     });
     if (this.usersId)
       this.adminService.getById(this.usersId).subscribe((data: User) => {

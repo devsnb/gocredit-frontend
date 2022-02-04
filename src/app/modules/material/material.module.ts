@@ -10,10 +10,16 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
   imports: [
+    BrowserModule,
     CommonModule,
     MatToolbarModule,
     MatIconModule,
@@ -25,8 +31,14 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatTabsModule,
     MatButtonToggleModule,
     MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
+    BrowserModule,
     MatToolbarModule,
     MatIconModule,
     MatInputModule,
@@ -37,6 +49,11 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatTabsModule,
     MatButtonToggleModule,
     MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
 })
 export class MaterialModule {}

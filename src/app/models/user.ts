@@ -3,13 +3,13 @@ import { CreditCard } from './credit-card';
 import { Role } from './role';
 
 export interface User {
-  userId: number;
+  userId?: number;
   name: string;
-  dataOfBirth: string;
+  dataOfBirth: Date;
   email: string;
   password: string;
   contactNumber: number;
-  role: Role;
+  role?: Role;
   address: Address;
   creditcards: Set<CreditCard>;
 }
