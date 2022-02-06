@@ -20,7 +20,6 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((map) => {
       let id = map.get('userId');
-      console.log(id);
       if (id) this.usersId = parseInt(map.get('userId')!);
     });
     if (this.usersId)

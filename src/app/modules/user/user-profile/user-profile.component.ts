@@ -11,7 +11,6 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit(): void {}
   details() {
-    console.log('database');
     this.router.navigate(['/me/credit-cards']);
   }
 }

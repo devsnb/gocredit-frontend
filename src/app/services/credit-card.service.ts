@@ -20,7 +20,6 @@ export class CreditCardService {
 
   deleteCreditCard = (cardId: number) => {
     let url = `${this.baseUrl}/id/${cardId}`;
-    console.log(cardId);
     this.http.delete(url);
   };
 
@@ -35,8 +34,11 @@ export class CreditCardService {
 
     const url = `${this.baseUrl}/user/${user.userId}`;
 
-    console.log(card);
-
     return this.http.post<CreditCard>(url, card);
+  }
+
+  getCardById(cardId: number) {
+    const url = `${this.baseUrl}/id/${cardId}`;
+    return this.http.get<CreditCard>(url);
   }
 }

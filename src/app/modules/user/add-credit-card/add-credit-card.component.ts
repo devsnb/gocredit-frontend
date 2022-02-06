@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { CardType } from 'src/app/models/card-type';
 import { CreditCard } from 'src/app/models/credit-card';
 import { CreditCardService } from 'src/app/services/credit-card.service';
 

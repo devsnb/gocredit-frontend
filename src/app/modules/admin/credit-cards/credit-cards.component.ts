@@ -36,7 +36,6 @@ export class CreditCardsComponent implements OnInit {
   constructor(private creditCardService: CreditCardService) {}
 
   ngOnInit(): void {
-    console.log('User' + this.userId);
     this.creditCardService.getCardsByUserId(this.userId).subscribe((data) => {
       this.creditCards = data;
     });
