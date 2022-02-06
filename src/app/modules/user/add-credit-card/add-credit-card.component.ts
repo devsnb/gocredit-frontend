@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { CreditCard } from 'src/app/models/credit-card';
 import { CreditCardService } from 'src/app/services/credit-card.service';
 
 @Component({
@@ -13,8 +14,17 @@ export class AddCreditCardComponent implements OnInit {
   ngOnInit(): void {}
 
   onAddCard(form: NgForm) {
+    console.log(form.value);
+
+    const card = {
+      nameOnCard: form.value.name,
+      cardNumber: form.value.number,
+      cardType: form.value.type.toUpperCase(),
+      validityDate: form.value.date,
+    };
+
     this.cardService
-      .addCreditCard(form.value)
+      .addCreditCard(card as CreditCard)
       .subscribe((data) => console.log(data));
   }
 }

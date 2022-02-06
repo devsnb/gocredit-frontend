@@ -18,15 +18,8 @@ export class BillsService {
     return this.http.get<Bill[]>(url);
   }
 
-  addBill(bill: Bill) {
-    let creditCard: CreditCard | undefined;
-    // this.adminService.getById().subscribe((data) => (creditCard = data));
-    if (!creditCard) {
-      throw new Error('User must be logged in');
-    }
-
-    const url = `${this.baseURL}/creditCard/${creditCard.cardId}`;
-
+  addBill(bill: Bill, cardId: number) {
+    const url = `${this.baseURL}/card/${cardId}`;
     return this.http.post<CreditCard>(url, bill);
   }
 }

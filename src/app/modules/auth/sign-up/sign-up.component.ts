@@ -14,12 +14,11 @@ export class SignUpComponent {
   constructor(private authService: AuthService) {}
 
   signUp(form: NgForm) {
-    const user: User = {
+    const user = {
       name: form.value.name,
       email: form.value.email,
       contactNumber: form.value.contactNumber,
-      creditcards: new Set(),
-      dataOfBirth: form.value.dateOfBirth.toISOString().substring(0, 10),
+      dateOfBirth: form.value.dateOfBirth,
       password: form.value.password,
       address: {
         city: form.value.city,
@@ -31,7 +30,7 @@ export class SignUpComponent {
     };
 
     console.log(user);
-
+    // @ts-ignore:next-line
     this.authService.signUp(user).subscribe((data) => {
       console.log(data);
     });

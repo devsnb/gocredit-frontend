@@ -24,7 +24,6 @@ export class BillsComponent implements OnInit {
 
     this.billsService.getBillsByCardNumber(this.userId).subscribe((data) => {
       this.bills = data;
-      console.log(data);
     });
   }
 }

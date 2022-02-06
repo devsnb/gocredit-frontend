@@ -42,7 +42,6 @@ export class DisplayCreditCardsComponent implements OnInit {
     console.log('User' + this.userId);
     this.userService.getByUserId(1).subscribe((data) => {
       this.creditCards = data;
-      console.log(data);
     });
   }
 

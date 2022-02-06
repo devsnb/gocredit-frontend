@@ -23,7 +23,6 @@ export class DisplayBillsComponent implements OnInit {
 
     this.billsService.getBillsByCardNumber(1).subscribe((data) => {
       this.bills = data;
-      console.log(data);
     });
   }
 }
