@@ -14,7 +14,7 @@
   margin: 3rem auto;
   width: 31.25rem;
   border-radius: 5px;
-  border: 1.5px solid salmon;
+  border: 1.5px solid cornflowerblue;
   padding: 2rem 3rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px, rgba(0, 0, 0, 0.1) 0px 8px 24px,
     rgba(0, 0, 0, 0.1) 0px 16px 56px;
@@ -24,12 +24,12 @@
   font-family: "Times New Roman";
   text-align: center;
   font-weight: bold;
-  color: salmon;
+  color: cornflowerblue;
   font-style: italic;
   text-shadow: 2px 2px #aaaaaa;
 }
 .button {
-  background-color: salmon;
+  background-color: cornflowerblue;
   font-style: italic;
   text-shadow: 2px 2px #aaaaaa;
   border-radius: 3rem;
