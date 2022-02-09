@@ -35,4 +35,8 @@ export class AuthService {
     let url = `${this.baseUrl}`;
     return this.http.post<User>(url, user);
   };
+
+  logOut() {
+    this.loggedInUser = undefined;
+  }
 }

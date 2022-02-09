@@ -4,6 +4,11 @@
   width: 15rem;
   align-items: flex-center;
 }
+.container1{
+  /* background-image: url("../../../../assets/img.jfif"); */
+  background-size: cover;
+  height: 60%;
+}
 .container {
   margin-left: 6rem;
   margin-top: auto;

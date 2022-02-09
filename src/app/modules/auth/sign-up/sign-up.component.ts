@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent {
+  successful: boolean = false;
   constructor(private authService: AuthService) {}
 
   signUp(form: NgForm) {
@@ -33,6 +34,7 @@ export class SignUpComponent {
     // @ts-ignore:next-line
     this.authService.signUp(user).subscribe((data) => {
       console.log(data);
+      if (data) this.successful = true;
     });
   }
 }

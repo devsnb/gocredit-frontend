@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { AdminGuardGuard } from './components/admin-guard.guard';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { UserGuardGuard } from './components/user-guard.guard';
 import { AddBillFormComponent } from './modules/admin/add-bill-form/add-bill-form.component';
 import { BillsComponent } from './modules/admin/bills/bills.component';
 import { CreditCardsComponent } from './modules/admin/credit-cards/credit-cards.component';
@@ -24,6 +26,17 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: 'admin/users',
+    component: UserListComponent,
+    canActivate: [AdminGuardGuard],
+  },
+  {
+    path: 'me',
+    component: UserProfileComponent,
+    canActivate: [UserGuardGuard],
+  },
+
+  {
     path: 'about-us',
     component: AboutUsComponent,
   },
@@ -43,6 +56,8 @@ const routes: Routes = [
   {
     path: 'admin/users/:userId/credit-card/:cardId/bills',
     component: BillsComponent,
+    canActivate: [AdminGuardGuard],
+    canActivateChild: [AdminGuardGuard],
     children: [
       {
         path: 'add-bill',
@@ -54,15 +69,19 @@ const routes: Routes = [
   {
     path: 'admin/users/:userId/credit-card/:cardId/add-bill',
     component: AddBillFormComponent,
+    canActivate: [AdminGuardGuard],
   },
 
   {
     path: 'admin/users',
+    canActivate: [AdminGuardGuard],
     component: UserListComponent,
   },
   {
     path: 'admin/users/:userId',
     component: UserDetailsComponent,
+    canActivate: [AdminGuardGuard],
+    canActivateChild: [AdminGuardGuard],
     children: [
       {
         path: 'cards',
@@ -73,6 +92,8 @@ const routes: Routes = [
   {
     path: 'me',
     component: UserProfileComponent,
+    canActivate: [UserGuardGuard],
+    canActivateChild: [UserGuardGuard],
     children: [
       {
         path: 'bills',

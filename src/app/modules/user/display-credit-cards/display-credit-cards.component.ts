@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CardType } from 'src/app/models/card-type';
 import { CreditCard } from 'src/app/models/credit-card';
+import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 import { CreditCardService } from '../../../services/credit-card.service';
 
@@ -19,7 +20,7 @@ interface CreditCardElement {
 })
 export class DisplayCreditCardsComponent implements OnInit {
   @Input()
-  userId!: number;
+  userId!: any;
 
   creditCards: CreditCard[] = [];
 
@@ -35,12 +36,15 @@ export class DisplayCreditCardsComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private cardService: CreditCardService
+    private cardService: CreditCardService,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
-    console.log('User' + this.userId);
-    this.userService.getByUserId(1).subscribe((data) => {
+    this.authService.getLoggedInUser().subscribe((user) => {
+      this.userId = user?.userId;
+    });
+    this.userService.getByUserId(this.userId).subscribe((data) => {
       this.creditCards = data;
     });
   }

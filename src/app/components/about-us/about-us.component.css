@@ -1,11 +1,12 @@
 .bg-image {
   background-image: url("https://res.cloudinary.com/chakkathanmai/image/upload/v1643301627/img_xioccb.jpg");
-  height: 450px;
+  height: 550px;
   width: 100%;
   background-size: cover;
 }
 h1 {
   margin: 2rem;
+  padding-top: 4rem;
   text-align: center;
   font-style: oblique;
   font-weight: bold;

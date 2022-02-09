@@ -12,6 +12,7 @@ import { CreditCardService } from 'src/app/services/credit-card.service';
 })
 export class AddBillFormComponent implements OnInit {
   cardId!: number;
+  successful: boolean = false;
 
   constructor(
     private billService: BillsService,
@@ -31,6 +32,8 @@ export class AddBillFormComponent implements OnInit {
       amount: form.value.amount,
       isPaid: false,
     };
-    this.billService.addBill(bill as Bill, this.cardId).subscribe();
+    this.billService.addBill(bill as Bill, this.cardId).subscribe((data) => {
+      if (data) this.successful = true;
+    });
   }
 }

@@ -1,4 +1,4 @@
-<div *ngIf="bills.length" [routerLink]="['/display-bills']">
+<div class="flex-container" *ngIf="bills.length" [routerLink]="['/display-bills']">
   <div class="card" *ngFor="let bill of bills">
     <div>
       <h3 class="biller-name">

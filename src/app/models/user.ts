@@ -9,7 +9,7 @@ export interface User {
   email: string;
   password: string;
   contactNumber: number;
-  role?: Role;
+  role: Role;
   address: Address;
   creditcards: Set<CreditCard>;
 }

@@ -1,46 +1,49 @@
-<div class="card">
-  <h1 class="bills-heading">BILL</h1>
-  <div class="container">
-    <form
-      class="form-div"
-      #addBillForm="ngForm"
-      (ngSubmit)="onAddBill(addBillForm)"
-    >
-      <mat-form-field appearance="fill">
-        <mat-label>Biller Name</mat-label>
-        <mat-label
-          *ngIf="billerName.touched && billerName.pristine"
-          [ngStyle]="{ color: 'red' }"
-        >
-          is required</mat-label
-        >
-        <input
-          matInput
-          placeholder="Enter biller Name"
-          #billerName="ngModel"
-          name="billerName"
-          required
-          ngModel
-        />
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Amount</mat-label>
-        <mat-label
-          *ngIf="amount.touched && amount.pristine"
-          [ngStyle]="{ color: 'red' }"
-        >
-          is required</mat-label
-        >
-        <input
-          matInput
-          placeholder="Enter Amount"
-          #amount="ngModel"
-          name="amount"
-          required
-          ngModel
-        />
-      </mat-form-field>
-      <button type="submit" mat-flat-button class="button">Submit</button>
-    </form>
+<div class="container1">
+  <div class="card">
+    <h1 class="bills-heading">BILL</h1>
+    <div class="container">
+      <form
+        class="form-div"
+        #addBillForm="ngForm"
+        (ngSubmit)="onAddBill(addBillForm)"
+      >
+        <mat-form-field appearance="fill">
+          <mat-label>Biller Name</mat-label>
+          <mat-label
+            *ngIf="billerName.touched && billerName.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter biller Name"
+            #billerName="ngModel"
+            name="billerName"
+            required
+            ngModel
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Amount</mat-label>
+          <mat-label
+            *ngIf="amount.touched && amount.pristine"
+            [ngStyle]="{ color: 'red' }"
+          >
+            is required</mat-label
+          >
+          <input
+            matInput
+            placeholder="Enter Amount"
+            #amount="ngModel"
+            name="amount"
+            required
+            ngModel
+          />
+        </mat-form-field>
+        <button type="submit" mat-flat-button class="button">Submit</button>
+      </form>
+      <p *ngIf="successful">Bill added successfully</p>
+    </div>
   </div>
 </div>

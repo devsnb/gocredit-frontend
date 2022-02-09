@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Bill } from 'src/app/models/bill';
+import { AuthService } from 'src/app/services/auth.service';
 import { BillsService } from 'src/app/services/bills.service';
 
 @Component({
@@ -9,11 +10,12 @@ import { BillsService } from 'src/app/services/bills.service';
   styleUrls: ['./display-bills.component.css'],
 })
 export class DisplayBillsComponent implements OnInit {
-  userId!: number;
+  userId!: any;
   bills: Bill[] = [];
   constructor(
     private billsService: BillsService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -21,7 +23,11 @@ export class DisplayBillsComponent implements OnInit {
       this.userId = params['cardId'];
     });
 
-    this.billsService.getBillsByCardNumber(1).subscribe((data) => {
+    this.authService.getLoggedInUser().subscribe((user) => {
+      this.userId = user?.userId;
+    });
+
+    this.billsService.getBillsByCardNumber(this.userId).subscribe((data) => {
       this.bills = data;
     });
   }

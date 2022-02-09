@@ -11,6 +11,8 @@ import { CreditCardService } from 'src/app/services/credit-card.service';
 export class AddCreditCardComponent implements OnInit {
   constructor(private cardService: CreditCardService) {}
 
+  successful: boolean = false;
+
   ngOnInit(): void {}
 
   onAddCard(form: NgForm) {
@@ -23,8 +25,8 @@ export class AddCreditCardComponent implements OnInit {
       validityDate: form.value.date,
     };
 
-    this.cardService
-      .addCreditCard(card as CreditCard)
-      .subscribe((data) => console.log(data));
+    this.cardService.addCreditCard(card as CreditCard).subscribe((data) => {
+      if (data) this.successful = true;
+    });
   }
 }
