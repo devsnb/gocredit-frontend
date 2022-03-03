@@ -1,8 +1,11 @@
-<div *ngIf="bills.length" [routerLink]="['/bills']">
+<div *ngIf="bills.length" class="container" [routerLink]="['/bills']">
+  <div>
+    <img class="bill-img" src="../../../../assets/bill2.jpg" alt="" />
+  </div>
   <div class="card" *ngFor="let bill of bills">
     <div>
       <h3 class="biller-name">
-        <mat-icon>account_circle</mat-icon> {{ bill.billerName }}
+        {{ bill.billerName }}
       </h3>
     </div>
     <div class="details-group">

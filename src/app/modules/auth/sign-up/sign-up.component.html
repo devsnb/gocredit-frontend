@@ -34,7 +34,6 @@
           >
             is required</mat-label
           >
-
           <input
             matInput
             placeholder="Enter DateOfBirth"
@@ -44,6 +43,7 @@
             ngModel
             [matDatepicker]="picker"
           />
+          <input matInput [matDatepicker]="picker" />
           <mat-datepicker-toggle
             matSuffix
             [for]="picker"
@@ -80,6 +80,7 @@
           >
           <input
             matInput
+            type="password"
             placeholder="Enter your password"
             #password="ngModel"
             required
@@ -98,6 +99,7 @@
           >
           <input
             matInput
+            type="password"
             placeholder="Enter same password"
             #password="ngModel"
             required
@@ -233,6 +235,6 @@
         </h1>
       </div>
     </form>
-    <p *ngIf="successful">Rigister successfully</p>
+    <p *ngIf="successful">Register successfully</p>
   </div>
 </div>

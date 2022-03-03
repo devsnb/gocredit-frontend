@@ -4,10 +4,14 @@
   width: 15rem;
   align-items: flex-center;
 }
-.container1{
-  /* background-image: url("../../../../assets/img.jfif"); */
+.container1 {
+  background-image: url("../../../../assets/contact1.jpg");
   background-size: cover;
-  height: 60%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5px;
 }
 .container {
   margin-left: 6rem;
@@ -16,9 +20,10 @@
   width: 100px;
 }
 .card {
-  margin: 3rem auto;
+  margin: 8rem auto;
   width: 31.25rem;
   border-radius: 5px;
+  background-color: #aaaaaa;
   border: 1.5px solid cornflowerblue;
   padding: 2rem 3rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px, rgba(0, 0, 0, 0.1) 0px 8px 24px,
@@ -43,4 +48,8 @@
   font-size: 24pt;
   font-family: "Times New Roman";
   font-weight: bold;
+}
+
+.fontcolor {
+  color: aliceblue;
 }

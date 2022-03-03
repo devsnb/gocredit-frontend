@@ -1,10 +1,13 @@
-<div class="container">
-  <button mat-button routerLink="add-credit-card" class="button">
-    Add creditcards
-  </button>
-  <button mat-button routerLink="credit-cards" class="button">
-    Show creditcards
-  </button>
-  <button mat-button routerLink="bills" class="button">Show bills</button>
+<div class="parent-container">
+  <div class="container">
+    <button mat-button routerLink="add-credit-card" class="button">
+      Add creditcards
+    </button>
+    <button mat-button routerLink="credit-cards" class="button">
+      Show creditcards
+    </button>
+    <button mat-button routerLink="bills" class="button">Show bills</button>
+  </div>
+
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
